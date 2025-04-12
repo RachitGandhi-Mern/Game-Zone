@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+#level {
+  font-size: 24px;
+  font-weight: bold;
+  color: coral;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.upper,
+.lower {
+  display: flex;
+  align-items: center;
+}
+
+#box1 {
+  background-color: palevioletred;
+}
+
+#box2 {
+  background-color: rgba(98, 98, 155, 0.603);
+}
+
+#box3 {
+  background-color: orange;
+}
+
+#box4 {
+  background-color: plum;
+}/*# sourceMappingURL=Simon.css.map */
