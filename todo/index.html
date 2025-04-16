@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todo App UI</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #153677, #4e085f);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .todo-container {
+        background-color: white;
+        padding: 20px 30px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, rgb(55, 53, 53), rgb(79, 77, 77));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        color: white;
+      }
+
+      .todo-header {
+        text-align: center;
+        margin-bottom: 20px;
+        border: 2px solid white;
+        border-radius: 25px;
+        padding: 5px;
+      }
+
+      .todo-header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      .todo-input {
+        display: flex;
+        margin-bottom: 20px;
+      }
+
+      .todo-input input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .todo-input input ::placeholder {
+        color: black;
+      }
+
+      .todo-input button {
+        padding: 10px 15px;
+        margin-left: 10px;
+        background: #28a745;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .todo-input button:hover {
+        background: #218838;
+      }
+
+      .todo-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .todo-list li {
+        background: #f9f9f9;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .todo-list li .delete-btn {
+        background: #dc3545;
+        border: none;
+        color: #fff;
+        padding: 5px 8px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .todo-list li .delete-btn:hover {
+        background: #c82333;
+      }
+
+      .first-task {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .first-task i {
+        height: 30px;
+        cursor: pointer;
+        color: red;
+      }
+
+      .todo-list li {
+        list-style: none;
+        border-radius: 10px;
+
+        color: white;
+        font-size: 17px;
+        user-select: none;
+        cursor: pointer;
+        background-color: rgb(59, 57, 57);
+        width: 85%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="todo-container">
+      <div class="todo-header">
+        <h1>To-Do-List</h1>
+      </div>
+      <div class="todo-input">
+        <input type="text" id="todo-input" placeholder="Enter a new todo..." />
+
+        <button id="add-btn">Add</button>
+      </div>
+      <ul class="todo-list" id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

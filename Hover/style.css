@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    color: white;
+    font-family: 'Gilroy', sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+  }
+  
+  p {
+    font-size: 1.2rem;
+  }
+  
+  button {
+    padding: 10px 25px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Custom Cursor */
+  .cursor {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.15s ease;
+    mix-blend-mode: difference;
+    z-index: 1000;
+  }
+  
+  /* Scale effect on hover */
+  .hover-target:hover ~ .cursor,
+  .hover-target:hover + .cursor {
+    transform: translate(-50%, -50%) scale(2);
+  }
+  
